@@ -8,25 +8,29 @@ router.post("/checkout", async (req, res) => {
       access_token: process.env.ACCESS_TOKEN,
     });
     let products = {
-        items: [
-            {
-              title: req.body.title,
-              unit_price: req.body.price,
-              quantity: req.body.unit,
-            }
-          ]
+      external_reference: "ABS",
+      back_urls: {
+        success: "http://localhost:3000/api/payments/success_pay",
+      },
+      items: [
+        {
+          title: req.body.title,
+          unit_price: parseInt(req.body.price),
+          quantity: parseInt(req.body.unit),
+        },
+      ],
     };
     console.log(req.body);
     mercadopago.preferences
       .create(products)
       .then(function (response) {
-        console.log(response)
-        global.id = response.body.id;
+        console.log(response.body.sandbox_init_point);
+
+        res.redirect(response.body.sandbox_init_point);
       })
-      .catch(function (error) {
-        console.log(error);
+      .catch((error) => {
+        throw error;
       });
-    res.status(200).json({ isError: false });
   } catch (err) {
     res.status(401).json({
       isError: false,

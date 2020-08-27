@@ -20,7 +20,10 @@ app.get("/", function (req, res) {
 });
 
 app.get("/detail", function (req, res) {
-  res.render("detail", req.query);
+  res.render("detail", {
+    ...req.query,
+    public_key: process.env.PUBLIC_KEY,
+  });
 });
 
 app.use(express.static("assets"));

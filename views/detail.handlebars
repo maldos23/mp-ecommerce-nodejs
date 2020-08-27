@@ -86,13 +86,14 @@
                                     </h2>
                                 </div>
                                 <form action="/api/payment/checkout" method="POST">
-                                    <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                                        data-preference-id='{{global.id}}'>
-                                    </script>
+                                    
                                     <input type="hidden" name="img" value={{ img }}>
                                     <input type="hidden" name="title" value="{{ title }}">
                                     <input type="hidden" name="price" value="{{ price }}">
                                     <input type="hidden" name="unit" value="{{ unit }}">
+                                    <button type="submit" class="mercadopago-button-checkout" action="/"
+                                        method="post">Pagar</button>
+                                    </fieldset>
                                 </form>
                             </div>
                         </div>
@@ -106,6 +107,8 @@
 <br />
 <br />
 
-<script>
+<script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 
+<script>
+console.log("{{ public_key }}")
 </script>
