@@ -2,13 +2,7 @@ const { Router } = require("express");
 const router = Router();
 
 router.post("/reciver", async(req,res) => {
-    try{
-
-    }catch{
-
-    }finally{
-        
-    }
+    console.log(req.body);
 });
 
 //Exporto rutas

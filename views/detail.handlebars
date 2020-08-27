@@ -86,7 +86,6 @@
                                     </h2>
                                 </div>
                                 <form action="/api/payment/checkout" method="POST">
-                                    
                                     <input type="hidden" name="img" value={{ img }}>
                                     <input type="hidden" name="title" value="{{ title }}">
                                     <input type="hidden" name="price" value="{{ price }}">
@@ -106,9 +105,10 @@
 
 <br />
 <br />
+<script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 
 <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 
 <script>
-console.log("{{ public_key }}")
+    console.log("{{ public_key }}")
 </script>

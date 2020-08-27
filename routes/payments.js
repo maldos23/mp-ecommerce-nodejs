@@ -8,25 +8,32 @@ router.post("/checkout", async (req, res) => {
       access_token: process.env.ACCESS_TOKEN,
     });
     let products = {
-      external_reference: "ABS",
+      external_reference: "ABC",
+      payment_methods: {
+        installments: 6,
+      },
+      notification_url: `${req.headers.host}/api/webhooks/reciver`,
       back_urls: {
-        success: "http://localhost:3000/api/payments/success_pay",
+        success: `${req.headers.host}/api/payments/success_pay`,
       },
       items: [
         {
           title: req.body.title,
           unit_price: parseInt(req.body.price),
           quantity: parseInt(req.body.unit),
+          description: "Multicolor Item",
+          picture_url:
+            "https://mercadopago-ecommerce-example.herokuapp.com/assets/samsung-galaxy-s9-xxl.jpg",
         },
       ],
     };
-    console.log(req.body);
+
     mercadopago.preferences
       .create(products)
       .then(function (response) {
-        console.log(response.body.sandbox_init_point);
-
-        res.redirect(response.body.sandbox_init_point);
+        console.log(response);
+        global.id = response.body.id;
+        res.redirect(response.body.init_point);
       })
       .catch((error) => {
         throw error;
