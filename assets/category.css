@@ -30,8 +30,9 @@
   }
 }
 
-.pd-l-plate::before, .pd-l-plate::after {
-  content: ' ';
+.pd-l-plate::before,
+.pd-l-plate::after {
+  content: " ";
   display: table;
 }
 
@@ -132,21 +133,45 @@
   }
 }
 
-.pd-billboard h1 + *, .pd-billboard h2 + *, .pd-billboard h3 + *, .pd-billboard h4 + *, .pd-billboard h5 + *, .pd-billboard h6 + * {
+.pd-billboard h1 + *,
+.pd-billboard h2 + *,
+.pd-billboard h3 + *,
+.pd-billboard h4 + *,
+.pd-billboard h5 + *,
+.pd-billboard h6 + * {
   margin-top: auto;
 }
 
-.pd-billboard p + h1, .pd-billboard ul + h1, .pd-billboard ol + h1, .pd-billboard p + h2, .pd-billboard ul + h2, .pd-billboard ol + h2, .pd-billboard p + h3, .pd-billboard ul + h3, .pd-billboard ol + h3, .pd-billboard p + h4, .pd-billboard ul + h4,
-.pd-billboard ol + h4, .pd-billboard p + h5, .pd-billboard ul + h5, .pd-billboard ol + h5, .pd-billboard p + h6, .pd-billboard ul + h6, .pd-billboard ol + h6 {
+.pd-billboard p + h1,
+.pd-billboard ul + h1,
+.pd-billboard ol + h1,
+.pd-billboard p + h2,
+.pd-billboard ul + h2,
+.pd-billboard ol + h2,
+.pd-billboard p + h3,
+.pd-billboard ul + h3,
+.pd-billboard ol + h3,
+.pd-billboard p + h4,
+.pd-billboard ul + h4,
+.pd-billboard ol + h4,
+.pd-billboard p + h5,
+.pd-billboard ul + h5,
+.pd-billboard ol + h5,
+.pd-billboard p + h6,
+.pd-billboard ul + h6,
+.pd-billboard ol + h6 {
   margin-top: auto;
 }
 
-.pd-billboard ul, .pd-billboard ol {
+.pd-billboard ul,
+.pd-billboard ol {
   list-style-type: none;
   margin-left: 0;
 }
 
-.pd-billboard p + *, .pd-billboard ul + *, .pd-billboard ol + * {
+.pd-billboard p + *,
+.pd-billboard ul + *,
+.pd-billboard ol + * {
   margin-top: auto;
 }
 
@@ -227,13 +252,13 @@
   transform: translateY(-50%);
 }
 
-.as-navtuck .pd-billboard-scale .pd-l-plate-scale .pd-billboard-info, .as-navtuck
-.pd-billboard-scale .pd-l-plate-scale .pd-billboard-info-2L {
+.as-navtuck .pd-billboard-scale .pd-l-plate-scale .pd-billboard-info,
+.as-navtuck .pd-billboard-scale .pd-l-plate-scale .pd-billboard-info-2L {
   top: 60.1%;
 }
 
-.as-carousel .pd-billboard-scale .pd-l-plate-scale .pd-billboard-info, .as-carousel
-.pd-billboard-scale .pd-l-plate-scale .pd-billboard-info-2L {
+.as-carousel .pd-billboard-scale .pd-l-plate-scale .pd-billboard-info,
+.as-carousel .pd-billboard-scale .pd-l-plate-scale .pd-billboard-info-2L {
   top: 60.5%;
 }
 
@@ -331,23 +356,28 @@
   line-height: 1.05;
   font-weight: 500;
   letter-spacing: 0.008em;
-  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(ar) {
   line-height: 1.325;
-  font-family: "SF Pro AR", "SF Pro Gulf", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro AR", "SF Pro Gulf", "SF Pro Display", "SF Pro Icons",
+    "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(ja) {
   line-height: 1.125;
-  font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+    "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo",
+    "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(th) {
   font-size: 36px;
   line-height: 1.30556;
-  font-family: "SF Pro TH", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro TH", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(zh) {
@@ -355,23 +385,30 @@
 }
 
 .pd-category-header .pd-billboard-header:lang(ko) {
-  font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+    "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(zh-CN) {
-  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+    "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(zh-HK) {
-  font-family: "SF Pro HK", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang HK", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro HK", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+    "PingFang HK", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(zh-MO) {
-  font-family: "SF Pro HK", "SF Pro TC", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang HK", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro HK", "SF Pro TC", "SF Pro Display", "SF Pro Icons",
+    "AOS Icons", "PingFang HK", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
 }
 
 .pd-category-header .pd-billboard-header:lang(zh-TW) {
-  font-family: "SF Pro TC", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "SF Pro TC", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+    "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (max-width: 1023px) and (max-device-width: 736px) {
@@ -380,36 +417,48 @@
     line-height: 1.1073;
     font-weight: 500;
     letter-spacing: 0.012em;
-    font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+      "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(th) {
     font-size: 25px;
     line-height: 1.4;
-    font-family: "SF Pro TH", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro TH", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+      "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(zh) {
     line-height: 1.28595;
   }
   .pd-category-header .pd-billboard-header:lang(ar) {
-    font-family: "SF Pro AR", "SF Pro Gulf", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro AR", "SF Pro Gulf", "SF Pro Display", "SF Pro Icons",
+      "AOS Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(ja) {
-    font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro JP", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+      "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo",
+      "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(ko) {
-    font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", "AOS Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro KR", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+      "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim",
+      "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(zh-CN) {
-    font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+      "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(zh-HK) {
-    font-family: "SF Pro HK", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang HK", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro HK", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+      "PingFang HK", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(zh-MO) {
-    font-family: "SF Pro HK", "SF Pro TC", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang HK", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro HK", "SF Pro TC", "SF Pro Display", "SF Pro Icons",
+      "AOS Icons", "PingFang HK", "Helvetica Neue", "Helvetica", "Arial",
+      sans-serif;
   }
   .pd-category-header .pd-billboard-header:lang(zh-TW) {
-    font-family: "SF Pro TC", "SF Pro Display", "SF Pro Icons", "AOS Icons", "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: "SF Pro TC", "SF Pro Display", "SF Pro Icons", "AOS Icons",
+      "PingFang TC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   }
 }
 
@@ -451,4 +500,46 @@
   padding: 7px 0px;
   bottom: 0px;
   text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  outline: none;
+  padding: 5px;
+  width: calc(100% - 15px);
+  border: 2px solid #bbb;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+  border: 2px solid #009ee3;
+}
+
+.form-container-checkout {
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  box-shadow: 0px 5px 20px #bbb;
+  border-radius: 5px;
+}
+
+.mercadopago-button-checkout {
+  background: #009ee3;
+  color: white;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+
+.mercadopago-button-checkout:hover {
+  background: #007cb1;
 }
