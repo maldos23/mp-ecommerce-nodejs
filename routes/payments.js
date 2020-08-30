@@ -54,7 +54,7 @@ router.post("/checkout", async (req, res) => {
           quantity: parseInt(req.body.unit),
           description: "Dispositivo móvil de Tienda e-commerce",
           picture_url:
-            "https://mercadopago-ecommerce-example.herokuapp.com/assets/samsung-galaxy-s9-xxl.jpg",
+            "https://mercadopago-ecommerce-example.herokuapp.com/assets/motorola-moto-g5-plus-1.jpg",
         },
       ],
     };
@@ -62,7 +62,6 @@ router.post("/checkout", async (req, res) => {
     mercadopago.preferences
       .create(paymentOptions)
       .then(function (response) {
-
         global.id = response.body.id;
         res.redirect(response.body.init_point);
       })

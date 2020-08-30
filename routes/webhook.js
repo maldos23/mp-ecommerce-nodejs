@@ -9,30 +9,29 @@ router.post("/reciver", async (req, res) => {
         el cual cachara unicamente la respuesta de mercadopago de una manera didactica
         para el examen.
     */
-  const emailServices = nodemailer.createTransport(
-    smtpTransport({
-      service: "gmail",
-      host: "smtp.gmail.com",
-      auth: {
-        user: process.env.EMAILUSER,
-        pass: process.env.EMAILPWD,
-      },
-    })
-  );
+  const testAccount = await nodemailer.createTestAccount();
+  const emailServices = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass, // generated ethereal password
+    },
+  });
   //Creo contenido de email de notificacion del web hook
   const emailContent = {
-    from: process.env.EMAILUSER,
-    to: process.env.EMAILUSER,
+    from: 'foo@example.com', // sender address
+    to: "bar@example.com",
     subject: "NOTIFICACION DE CORREO WEBHOOK",
     html: JSON.stringify(req.body),
   };
 
-  emailServices.sendMail(emailContent, (error) => {
-    if (error) {
-      console.error("Error al enviar correo", error);
-    }
-  });
+  let info = await emailServices.sendMail(emailContent);
 
+  console.log("Mensaje enviado: %s", info.messageId);
+
+  console.log("URL: %s", nodemailer.getTestMessageUrl(info));
   res.status(200).json("ok");
 });
 
