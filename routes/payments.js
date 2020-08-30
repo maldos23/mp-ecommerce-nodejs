@@ -58,12 +58,11 @@ router.post("/checkout", async (req, res) => {
         },
       ],
     };
-    console.log(paymentOptions);
     //Creo preferencia de mercadopago
     mercadopago.preferences
       .create(paymentOptions)
       .then(function (response) {
-        console.log(response.body);
+
         global.id = response.body.id;
         res.redirect(response.body.init_point);
       })
