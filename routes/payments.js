@@ -41,7 +41,7 @@ router.post("/checkout", async (req, res) => {
         ],
       },
 
-      notification_url: "https://hookb.in/6JaqLgRNmkuLbb031Zxy", //`${req.headers.host}/api/webhooks/reciver`,
+      notification_url: `${req.headers.host}/api/webhooks/reciver`,
       back_urls: {
         success: `${req.headers.host}/api/redirects/success_pay`,
         pending: `${req.headers.host}/api/redirects/pending_pay`,
