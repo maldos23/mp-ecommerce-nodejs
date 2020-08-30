@@ -63,6 +63,7 @@ router.post("/checkout", async (req, res) => {
     mercadopago.preferences
       .create(paymentOptions)
       .then(function (response) {
+        console.log("external_reference",response.body.external_reference);
         console.log("ID: %s",response.body.id);
         global.id = response.body.id;
         res.redirect(response.body.init_point);
