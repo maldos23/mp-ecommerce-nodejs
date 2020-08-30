@@ -11,6 +11,7 @@ router.post("/checkout", async (req, res) => {
     });
     // Opciones de pago con lo requisitos solicitados
     let paymentOptions = {
+      auto_return:"approved",
       payer: {
         name: req.body.name || "",
         surname: req.body.surname || "",
@@ -25,7 +26,7 @@ router.post("/checkout", async (req, res) => {
           street_number: parseInt(req.body.street_number),
         },
       },
-      external_reference: "gino.romero.andriano@gmail.com",
+      external_reference: req.body.email || "",
       payment_methods: {
         installments: 6,
         excluded_payment_methods: [
@@ -62,6 +63,7 @@ router.post("/checkout", async (req, res) => {
     mercadopago.preferences
       .create(paymentOptions)
       .then(function (response) {
+        console.log("ID: %s",response.body.id);
         global.id = response.body.id;
         res.redirect(response.body.init_point);
       })
