@@ -1,11 +1,13 @@
-require("dotenv").config();
+require("dotenv").config(); //manejo las variables locales con archivo .env
 var express = require("express");
 var exphbs = require("express-handlebars");
 var morgan = require("morgan");
 var app = express();
+
+//Asigno puerto de default si no llega a existir
 var PORT = process.env.PORT || 3000;
 
-app.use(morgan("dev"));
+app.use(morgan("dev")); //Manejo las respuesta de la vista en el servidor
 app.use(express.urlencoded());
 app.use(express.json());
 app.engine("handlebars", exphbs());

@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="as-accessories-results  as-search-desktop">
-                    <div class="width:60%">
+                    <div class="width:40%">
                         <div class="as-producttile-tilehero with-paddlenav " style="float:left;">
                             <div class="as-dummy-container as-dummy-img">
 
@@ -61,9 +61,7 @@
                                             data-relatedlink="6|Powerbeats3 Wireless Earphones - Neighborhood Collection - Brick Red|MPXP2">
                                             <div class="as-tilegallery-element as-image-selected">
                                                 <div class=""></div>
-                                                <img src="./assets/003.jpg"
-                                                    class="ir ir item-image as-producttile-image" alt="" width="445"
-                                                    height="445" style="content:-webkit-image-set(url({{ img }}) 2x);">
+                                                <img src="{{ img }}" alt="" width="250px">
                                             </div>
                                         </div>
                                     </div>
@@ -76,9 +74,9 @@
                                         </p>
                                     </h3>
 
-                                    <h3>
-                                        {{ price }}
-                                    </h3>
+                                    <h4>
+                                        $ {{ price }}
+                                    </h4>
                                     <h2>
                                         Cantidad: <b style="color: #009ee3;">
                                             {{ unit }}
@@ -86,13 +84,37 @@
                                     </h2>
                                 </div>
                                 <form action="/api/payment/checkout" method="POST">
+                                    <h3>
+                                        Datos de Cliente
+                                    </h3>
+                                    <label for="name">Nombre(s)</label>
+                                    <input type="text" name="name" placeholder="Juan" required />
+                                    <label for="surname">Apellido(s)</label>
+                                    <input type="text" name="surname" placeholder="Perez" required />
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" placeholder="ejemplo@ejemplo.com" required />
+                                    <div>
+                                    <label for="area_code">Codigo de area</label>
+                                    <input type="number" max="99" maxlength="2" name="area_code" required />
+                                    <label for="number">Telefono</label>
+                                    <input type="tel" name="phone" required />
+                                    </div>
+                                    <h3>
+                                        Datos de Domicilio
+                                    </h3>
+                                    <label for="street">Nombre de Calle</label>
+                                    <input type="text" name="street" placeholder="Calle de Ejemplo, Ciudad Falsa" required />
+                                    <label for="street_number">Número de la casa</label>
+                                    <input type="number" name="street_number" placeholder="0000" required />
+                                    <label for="cp">Codigo Postal</label>
+                                    <input type="number" name="cp" placeholder="CP" required />
                                     <input type="hidden" name="img" value={{ img }}>
                                     <input type="hidden" name="title" value="{{ title }}">
                                     <input type="hidden" name="price" value="{{ price }}">
                                     <input type="hidden" name="unit" value="{{ unit }}">
                                     <button type="submit" class="mercadopago-button-checkout" action="/"
                                         method="post">Pagar</button>
-                                    </fieldset>
+
                                 </form>
                             </div>
                         </div>
@@ -108,7 +130,3 @@
 <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 
 <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
-
-<script>
-    console.log("{{ public_key }}")
-</script>
