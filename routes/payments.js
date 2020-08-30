@@ -9,7 +9,6 @@ router.post("/checkout", async (req, res) => {
       access_token: process.env.ACCESS_TOKEN,
       integrator_id: process.env.INTEGRATOR_ID, //uso integrator dev_24c65fb163bf11ea96500242ac130004 asignado en la capacitacion
     });
-    console.log(req.body);
     // Opciones de pago con lo requisitos solicitados
     let paymentOptions = {
       payer: {
@@ -43,13 +42,13 @@ router.post("/checkout", async (req, res) => {
 
       notification_url: `${req.headers.host}/api/webhooks/reciver`,
       back_urls: {
-        success: `${req.headers.host}/api/redirects/success_pay`,
-        pending: `${req.headers.host}/api/redirects/pending_pay`,
-        failure: `${req.headers.host}/api/redirects/failure_pay`,
+        success: `https://${req.headers.host}/api/redirects/success_pay`,
+        pending: `https://${req.headers.host}/api/redirects/pending_pay`,
+        failure: `https://${req.headers.host}/api/redirects/failure_pay`,
       },
       items: [
         {
-          id:1234,
+          id: 1234,
           title: req.body.title,
           unit_price: parseInt(req.body.price),
           quantity: parseInt(req.body.unit),

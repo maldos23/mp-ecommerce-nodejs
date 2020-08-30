@@ -9,7 +9,6 @@ router.post("/reciver", async (req, res) => {
         el cual cachara unicamente la respuesta de mercadopago de una manera didactica
         para el examen.
     */
-
   const emailServices = nodemailer.createTransport(
     smtpTransport({
       service: "gmail",
