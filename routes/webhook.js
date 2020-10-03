@@ -1,7 +1,6 @@
 const { Router } = require("express");
 const router = Router();
 const nodemailer = require("nodemailer");
-const smtpTransport = require("nodemailer-smtp-transport");
 
 router.post("/reciver", async (req, res) => {
   /*

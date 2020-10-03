@@ -7,7 +7,7 @@ router.post("/checkout", async (req, res) => {
     //configuro SDK de mercado de pago
     mercadopago.configure({
       access_token: process.env.ACCESS_TOKEN,
-      integrator_id: process.env.INTEGRATOR_ID, //uso integrator dev_24c65fb163bf11ea96500242ac130004 asignado en la capacitacion
+      integrator_id: process.env.INTEGRATOR_ID, 
     });
     // Opciones de pago con lo requisitos solicitados
     let paymentOptions = {
@@ -41,7 +41,7 @@ router.post("/checkout", async (req, res) => {
         ],
       },
 
-      notification_url: `${req.headers.host}/api/webhooks/reciver`,
+      notification_url: process.env.URI_HOOK || `${req.headers.host}/api/webhooks/reciver`,
       back_urls: {
         success: `https://${req.headers.host}/api/redirects/success_pay`,
         pending: `https://${req.headers.host}/api/redirects/pending_pay`,
